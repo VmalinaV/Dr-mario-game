@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dr. Mario</title>
+
+    <link rel="icon" type="image/png" href="gfx/favicon.png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script id="main-script" src="scripts/main.js" type="module"></script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div id="stage-completed">
+            <img alt="stage-completed" src="gfx/sc.png">
+        </div>
+        <div id="game-over">
+            <img alt="game-over" src="gfx/go.png">
+        </div>
+
+        <div id="score">
+            <div class="row" id="top">
+                <img alt="top" src="gfx/top.png">
+                <div class="digits">
+                    <img alt="digit" src="gfx/0.png">
+                    <img alt="digit" src="gfx/0.png">
+                    <img alt="digit" src="gfx/0.png">
+                    <img alt="digit" src="gfx/0.png">
+                    <img alt="digit" src="gfx/0.png">
+                    <img alt="digit" src="gfx/0.png">
+                    <img alt="digit" src="gfx/0.png">
+                </div>
+            </div>
+            <div class="row" id="current">
+                <img alt="score" src="gfx/score.png">
+                <div class="digits">
+                    <img alt="digit" src="gfx/0.png">
+                    <img alt="digit" src="gfx/0.png">
+                    <img alt="digit" src="gfx/0.png">
+                    <img alt="digit" src="gfx/0.png">
+                    <img alt="digit" src="gfx/0.png">
+                    <img alt="digit" src="gfx/0.png">
+                    <img alt="digit" src="gfx/0.png">
+                </div>
+            </div>
+        </div>
+
+        <img class="magnify" src="gfx/magnify/bl/1.png" alt="blue">
+        <img class="magnify" src="gfx/magnify/br/1.png" alt="brown">
+        <img class="magnify" src="gfx/magnify/yl/1.png" alt="yellow">
+
+        <canvas id="mario"></canvas>
+
+        <div id="info">
+            <div class="row">
+                <img alt="level" src="gfx/level.png">
+                <div class="indent">
+                    <img alt="digit" src="gfx/0.png">
+                    <img alt="digit" src="gfx/0.png">
+                </div>
+            </div>
+            <div class="row">
+                <img alt="speed" src="gfx/speed.png">
+                <div class="indent">
+                    <img alt="low" src="gfx/low.png">
+                </div>
+            </div>
+            <div class="row" id="viruses">
+                <img alt="virus" src="gfx/virus.png">
+                <div class="indent">
+                    <img alt="digit" src="gfx/0.png">
+                    <img alt="digit" src="gfx/0.png">
+                </div>
+            </div>
+        </div>
+
+        <div id="game-field">
+            <!-- generate squares here -->
+        </div>
+
+        <canvas id="throw-field"></canvas>
+
+    </div>
+
+    <!-- ERROR HANDLING -->
+    <script>
+        (function () {
+            document.getElementById('main-script').onerror = function () {
+                alert('Sorry, this application requires a web server to run!');
+            }
+        })();
+    </script>
+
+</body>
+
+</html>
